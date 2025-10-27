@@ -1,149 +1,60 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Your Name — Portfolio</title>
-    <meta name="description" content="Personal portfolio of Your Name: research, projects, publications, and contact.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/img/favicon.png">
-    <meta property="og:title" content="Your Name — Portfolio">
-    <meta property="og:description" content="Research, projects, publications, and contact.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/img/og-preview.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hamza Kaddour — Software Engineer • AI Researcher</title>
+    <meta name="description"
+      content="Portfolio of Hamza Kaddour — Software Engineer & AI Researcher specializing in Cybersecurity, Cloud, and Machine Learning." />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/theme.js"></script>
   </head>
+
   <body>
-    <header class="site-header">
+    <header class="navbar">
       <div class="container row between center">
-        <a class="brand" href="#top">Your Name</a>
+        <a class="brand" href="index.html">Hamza Kaddour</a>
         <nav class="nav">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#publications">Publications</a>
-          <a href="#blog">Blog</a>
-          <a href="#contact">Contact</a>
-          <button id="themeToggle" class="btn-ghost" aria-label="Toggle theme">🌓</button>
+          <a href="index.html">Home</a>
+          <a href="resume.html">Resume</a>
+          <a href="projects.html">Projects</a>
+          <a href="publications.html">Publications</a>
+          <a href="contact.html">Contact</a>
+          <button id="themeToggle" aria-label="Toggle theme">🌙</button>
         </nav>
       </div>
     </header>
 
-    <main id="top">
-      <section id="hero" class="section hero">
-        <div class="container">
-          <h1>Hi, I'm <span class="accent">Your Name</span>.</h1>
-          <p class="lead">Short tagline about what you do (e.g., “PhD candidate in Remote Sensing & AI, focusing on cloud-shadow detection and river-ice.”).</p>
-          <div class="cta">
-            <a class="btn" href="#projects">See my work</a>
-            <a class="btn-outline" href="assets/docs/cv.pdf">Download CV</a>
-          </div>
+    <main>
+      <section id="hero" class="section hero center">
+        <img src="assets/img/me.jpg" alt="Hamza Kaddour Photo" class="avatar" />
+        <h1>Hamza Kaddour</h1>
+        <p class="tagline">Software Engineer • AI Researcher</p>
+        <div class="links">
+          <a class="btn" href="assets/docs/cv.pdf" target="_blank">📄 Download CV</a>
+          <a class="btn-outline" href="projects.html">🔍 View Projects</a>
         </div>
       </section>
 
       <section id="about" class="section">
         <div class="container">
-          <h2>About</h2>
-          <div class="grid-2">
-            <p>
-              Replace this with a concise bio (3–5 sentences). Mention your current position,
-              research interests, and a highlight achievement. Keep it friendly and focused.
-            </p>
-            <div>
-              <ul class="facts">
-                <li>📍 Location: City, Country</li>
-                <li>🎓 Affiliation: Your Lab / University</li>
-                <li>🧠 Interests: Remote Sensing, AI/ML, Geospatial</li>
-                <li>✉️ Email: you@example.com</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section alt">
-        <div class="container">
-          <h2>Projects</h2>
-          <div class="cards">
-            <article class="card">
-              <img src="assets/img/project-1.png" alt="Project 1 preview">
-              <div class="card-body">
-                <h3>Project Title</h3>
-                <p>One-line summary of what the project does and why it matters.</p>
-                <div class="tags">
-                  <span>Python</span><span>Remote Sensing</span><span>Deep Learning</span>
-                </div>
-                <div class="links">
-                  <a href="#" target="_blank" rel="noopener">Repo</a>
-                  <a href="#" target="_blank" rel="noopener">Demo</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="card">
-              <img src="assets/img/project-2.png" alt="Project 2 preview">
-              <div class="card-body">
-                <h3>Another Project</h3>
-                <p>Short description and (optionally) the result or impact.</p>
-                <div class="tags">
-                  <span>PyTorch</span><span>GIS</span><span>Automation</span>
-                </div>
-                <div class="links">
-                  <a href="#" target="_blank" rel="noopener">Repo</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="publications" class="section">
-        <div class="container">
-          <h2>Publications</h2>
-          <ol class="pubs">
-            <li>
-              <strong>Paper Title.</strong> Author, Author, <em>Venue</em>, Year.
-              <a href="#" target="_blank" rel="noopener">PDF</a> · <a href="#" target="_blank" rel="noopener">Code</a>
-            </li>
-            <li>
-              <strong>Another Paper.</strong> Author, <em>Conference</em>, Year.
-              <a href="#" target="_blank" rel="noopener">PDF</a>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="blog" class="section alt">
-        <div class="container">
-          <h2>Blog</h2>
-          <ul class="list">
-            <li><a href="#">Most recent post title</a> — short teaser sentence.</li>
-            <li><a href="#">Another post</a> — what this one covers.</li>
-          </ul>
-          <p class="muted">Prefer Markdown? You can point to an external blog or add a static `blog/` folder.</p>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="container">
-          <h2>Contact</h2>
-          <p>Best ways to reach you: email, LinkedIn, Google Scholar, Twitter/X, GitHub.</p>
-          <ul class="social">
-            <li><a href="#" aria-label="GitHub">GitHub</a></li>
-            <li><a href="#" aria-label="Google Scholar">Google Scholar</a></li>
-            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-            <li><a href="#" aria-label="X (Twitter)">X</a></li>
-          </ul>
+          <h2>About Me</h2>
+          <p>
+            I’m a researcher and engineer passionate about building secure, intelligent, and scalable
+            systems. My work spans AI, cybersecurity, and cloud computing — from deep-learning-based object detection
+            to automated DevSecOps pipelines. Currently, I’m pursuing an M.S. in Computer Engineering at Idaho State University
+            while serving as a Research Assistant at Stevens Institute of Technology.
+          </p>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container row between center">
-        <small>© <span id="year"></span> Your Name. All rights reserved.</small>
-        <a href="#top">Back to top ↑</a>
-      </div>
+    <footer class="site-footer center">
+      <small>© <span id="year"></span> Hamza Kaddour | <a href="mailto:hamzakaddour1998@gmail.com">Contact</a></small>
     </footer>
 
-    <!-- Optional: If you set up a custom domain, add CNAME file at repo root -->
-    <script src="js/main.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
