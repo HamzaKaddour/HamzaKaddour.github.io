@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Hamza Kaddour — Software Engineer • AI Researcher</title>
     <meta name="description"
-      content="Portfolio of Hamza Kaddour — Software Engineer & AI Researcher specializing in Cybersecurity, Cloud, and Machine Learning." />
+      content="Portfolio of Hamza Kaddour — Software Engineer, AI Researcher, and Cybersecurity Enthusiast." />
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/theme.js"></script>
   </head>
@@ -15,8 +15,7 @@
       <div class="container row between center">
         <a class="brand" href="index.html">Hamza Kaddour</a>
         <nav class="nav">
-          <a href="index.html">Home</a>
-          <a href="resume.html">Resume</a>
+          <a href="index.html" class="active">Home</a>
           <a href="projects.html">Projects</a>
           <a href="publications.html">Publications</a>
           <a href="contact.html">Contact</a>
@@ -26,25 +25,125 @@
     </header>
 
     <main>
+      <!-- Hero Section -->
       <section id="hero" class="section hero center">
-        <img src="assets/img/me.jpg" alt="Hamza Kaddour Photo" class="avatar" />
+        <img src="assets/img/hamzakaddour.png" alt="Hamza Kaddour Photo" class="avatar large" />
         <h1>Hamza Kaddour</h1>
         <p class="tagline">Software Engineer • AI Researcher</p>
         <div class="links">
           <a class="btn" href="assets/docs/cv.pdf" target="_blank">📄 Download CV</a>
-          <a class="btn-outline" href="projects.html">🔍 View Projects</a>
+          <a class="btn-outline" href="https://github.com/HamzaKaddour" target="_blank">🔗 GitHub</a>
+          <a class="btn-outline" href="https://www.linkedin.com/in/hamzakaddour/" target="_blank">💼 LinkedIn</a>
         </div>
       </section>
 
+      <!-- About -->
       <section id="about" class="section">
         <div class="container">
-          <h2>About Me</h2>
+          <h2>About</h2>
           <p>
-            I’m a researcher and engineer passionate about building secure, intelligent, and scalable
-            systems. My work spans AI, cybersecurity, and cloud computing — from deep-learning-based object detection
-            to automated DevSecOps pipelines. Currently, I’m pursuing an M.S. in Computer Engineering at Idaho State University
-            while serving as a Research Assistant at Stevens Institute of Technology.
+            I’m a Software Engineer and AI Researcher with experience spanning cybersecurity, cloud automation, 
+            and applied machine learning. I build intelligent, secure, and scalable systems that integrate 
+            AI-driven analytics with strong software engineering practices. I’m passionate about applying 
+            AI and deep reinforcement learning for secure, high-performance network systems.
           </p>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="section alt">
+        <div class="container">
+          <h2>Education</h2>
+          <ul class="edu-list">
+            <li><strong>Idaho State University (USA)</strong> — M.S. in Computer Engineering, 2024–2025<br/>
+              <em>Focus: Cybersecurity, Deep Learning, Reinforcement Learning, and Network Systems</em>
+            </li>
+            <li><strong>Higher School of Communication of Tunis (SUP’COM, Tunisia)</strong> — B.S. in Computer & Telecommunication Engineering, 2022</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <div class="container">
+          <h2>Experience</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Stevens Institute of Technology</h3>
+              <p><em>Software Engineer (AI & Cloud) — Researcher, 2025–Present</em></p>
+              <ul>
+                <li>Automating AI workflows on AWS and optimizing HPC environments.</li>
+                <li>Developing and testing reinforcement learning systems for cloud-shadow detection.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Idaho State University</h3>
+              <p><em>Data Scientist — Research Assistant, 2024–2025</em></p>
+              <ul>
+                <li>Developed WebSecScore for large-scale web vulnerability testing.</li>
+                <li>Designed hierarchical deep fake detection models (91.6% accuracy).</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Responsible Cyber (Singapore)</h3>
+              <p><em>Cybersecurity Software Engineer, 2022–2023</em></p>
+              <ul>
+                <li>Integrated APIs and automation scripts for large-scale domain risk scanning.</li>
+                <li>Optimized legacy code reducing memory usage by 98%.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills & Tools -->
+      <section id="skills" class="section alt">
+        <div class="container">
+          <h2>Skills & Tools</h2>
+          <div class="skills-grid">
+            <div>
+              <h4>Cybersecurity</h4>
+              <p>Incident Response, OWASP, Wapiti, Compliance, Cryptography, TryHackMe, HackTheBox</p>
+            </div>
+            <div>
+              <h4>Coding</h4>
+              <p>Python, C, C++, JavaScript, Git, Linux, Docker, CI/CD</p>
+            </div>
+            <div>
+              <h4>Cloud</h4>
+              <p>AWS (Lambda, S3, EC2, RDS, API Gateway), Netskope, Docker</p>
+            </div>
+            <div>
+              <h4>Data Science</h4>
+              <p>TensorFlow, PyTorch, Pandas, Keras, scikit-learn</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications" class="section">
+        <div class="container">
+          <h2>Certifications</h2>
+          <ul>
+            <li>CompTIA Security+</li>
+            <li>Cisco Certified Network Associate (CCNA)</li>
+            <li><a href="https://www.credly.com/badges/d61fc7c5-cb2a-421a-9a0e-09dcca333c85" target="_blank">Cisco CyberOps Associate</a></li>
+            <li><a href="https://drive.google.com/file/d/1-VCtrBq_SQeoi0eEfEIyo4zC5ExsnPvR/view?pli=1" target="_blank">Cisco IoT Fundamentals</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Volunteering -->
+      <section id="volunteering" class="section alt">
+        <div class="container">
+          <h2>Volunteering</h2>
+          <ul>
+            <li>TEDx Sup’Com — Organizer and Speaker Coordination</li>
+            <li>IEEE Club Sup’Com — Project Lead and Technical Advisor</li>
+          </ul>
         </div>
       </section>
     </main>
