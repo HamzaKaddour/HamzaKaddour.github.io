@@ -115,91 +115,62 @@ a {
   padding: 1rem 0;
 }
 
-.pdf-viewer {
-  width: 100%;
-  height: 80vh;
-  border: none;
-  margin-top: 1rem;
-}
-
-.pubs li {
-  margin-bottom: 1rem;
-}
-
-/* ---------- Experience Cards ---------- */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  align-items: stretch;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+/* ===== Experience ===== */
+.exp-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.25rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: relative;
-  overflow: hidden;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+.exp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
 }
 
-.card h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  color: var(--accent);
-}
-
-.card p {
-  margin: 0.3rem 0;
-  color: var(--fg);
-}
-
-.card ul {
-  margin: 0.5rem 0;
-  padding-left: 1.25rem;
-  list-style: disc;
-}
-
-/* Logo inside each experience card */
-.logo-bottom {
+.exp-header {
   display: flex;
-  justify-content: flex-end;
-  margin-top: auto;
-  padding-top: 0.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.logo-bottom img {
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
+.exp-logo {
+  width: 80px;
+  height: 40px;
   object-fit: contain;
+  border-radius: 6px;
   border: 1px solid var(--border);
   background: #fff;
+  padding: 4px;
+  box-sizing: border-box;
   opacity: 0.9;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.logo-bottom img:hover {
-  transform: scale(1.1);
+.exp-logo:hover {
+  transform: scale(1.05);
   opacity: 1;
 }
 
-/* ---------- Education Section ---------- */
-.edu-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.exp-card h3 {
+  color: var(--accent);
+  margin-top: 0;
 }
 
+.exp-card p {
+  margin: 0.3rem 0 0.6rem 0;
+}
+
+.exp-card ul {
+  padding-left: 1.3rem;
+  margin: 0.5rem 0 0.5rem 0;
+  list-style-type: disc;
+}
+
+/* ===== Education ===== */
 .edu-card {
   display: flex;
   align-items: center;
@@ -208,9 +179,10 @@ a {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-.edu-card .logo {
+.logo {
   width: 55px;
   height: 55px;
   border-radius: 10px;
@@ -219,7 +191,7 @@ a {
   background: #fff;
 }
 
-/* ---------- Skills Section ---------- */
+/* ===== Skills ===== */
 .badge-grid {
   display: flex;
   flex-wrap: wrap;
@@ -232,95 +204,15 @@ a {
   height: 28px;
 }
 
-/* ---------- Responsive ---------- */
+/* ===== Responsive ===== */
 @media (max-width: 600px) {
-  .card ul {
-    padding-left: 1rem;
+  .exp-logo {
+    width: 65px;
+    height: 32px;
   }
-  .logo-bottom img {
-    width: 36px;
-    height: 36px;
-  }
+
   .edu-card .logo {
     width: 45px;
     height: 45px;
-  }
-}
-
-/* ===== Experience Resume Layout ===== */
-.exp-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
-
-.exp-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.exp-card h3 {
-  margin-top: 0;
-  color: var(--accent);
-  font-size: 1.1rem;
-}
-
-.exp-card p {
-  margin: 0.3rem 0 0.5rem 0;
-  line-height: 1.5;
-}
-
-.exp-card ul {
-  padding-left: 1.3rem;
-  margin: 0.5rem 0 1.2rem 0;
-  list-style-type: disc;
-}
-
-.exp-card li {
-  margin-bottom: 0.4rem;
-}
-
-.logo-bottom {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: auto;
-  padding-top: 0.5rem;
-}
-
-.logo-bottom img {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  object-fit: contain;
-  background: #fff;
-  opacity: 0.9;
-  transition: all 0.3s ease;
-}
-
-.logo-bottom img:hover {
-  transform: scale(1.08);
-  opacity: 1;
-}
-
-/* On small screens */
-@media (max-width: 600px) {
-  .exp-card {
-    padding: 1rem;
-  }
-  .exp-card h3 {
-    font-size: 1rem;
-  }
-  .logo-bottom img {
-    width: 40px;
-    height: 40px;
   }
 }
