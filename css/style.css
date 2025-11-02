@@ -216,3 +216,9 @@ a {
     height: 45px;
   }
 }
+.btn i,
+.btn-outline i {
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  font-size: 1rem;
+}
