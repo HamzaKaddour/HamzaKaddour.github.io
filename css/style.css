@@ -170,6 +170,15 @@ a {
   list-style-type: disc;
 }
 
+.exp-logo {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.exp-logo:hover {
+  transform: scale(1.05);
+}
+
 /* ===== Education ===== */
 .edu-card {
   display: flex;
