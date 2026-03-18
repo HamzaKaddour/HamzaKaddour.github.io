@@ -4,8 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projects — Hamza Kaddour</title>
+  <meta name="description" content="Selected software, AI, cybersecurity, and remote sensing projects by Hamza Kaddour." />
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/theme.js"></script>
+  <script defer src="js/main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="assets/img/Me Professional.JPG" />
+
 </head>
 <body>
   <header class="navbar">
@@ -13,44 +18,266 @@
       <a class="brand" href="index.html">Hamza Kaddour</a>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <!-- <a href="resume.html">Resume</a> -->
         <a href="projects.html" class="active">Projects</a>
         <a href="publications.html">Publications</a>
         <a href="contact.html">Contact</a>
-        <button id="themeToggle">🌙</button>
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
       </nav>
     </div>
   </header>
 
-  <main class="section">
-    <div class="container">
-      <h1>Projects</h1>
-      <div class="cards">
-        <article class="card">
-          <h3>WebSecScore</h3>
-          <p>Comprehensive web application security testing tool that assesses web domains and reports risk scores.</p>
-          <a href="https://github.com/HamzaKaddour/WebSecScore" target="_blank" class="btn">🔗 GitHub Repo</a>
-        </article>
-
-        <article class="card">
-          <h3>IoT Intrusion Detection</h3>
-          <p>Research project evaluating ML, DL and RL techniques for IoT security datasets; published in IEEE ORSS 2024.</p>
-          <a href="https://github.com/HamzaKaddour/DL_ML_IoT_Security" target="_blank" class="btn">🔗 GitHub Repo</a>
-        </article>
-
-        <article class="card">
-          <h3>SAR River Ice Segmentation</h3>
-          <p>Developed a weakly supervised ML pipeline for river ice segmentation using SAR backscatter and optical-derived labels.</p>
-          <!-- <a href="https://github.com/HamzaKaddour/WebSecScore" target="_blank" class="btn">🔗 GitHub Repo</a> -->
-        </article>
-
-        <article class="card">
-          <h3>Polymer MFR Prediction</h3>
-          <p>ML-based academic project predicting Polymer Melt Flow Rate (MFR) using experimental data and regression models.</p>
-          <a href="https://github.com/HamzaKaddour/PolymerMFR" target="_blank" class="btn">🔗 GitHub Repo</a>
-        </article>
+  <main>
+    <section class="section project-hero">
+      <div class="container">
+        <span class="eyebrow">Portfolio Highlights</span>
+        <h1>Projects</h1>
+        <p class="hero-copy">
+          A mix of production-minded AI, data, cybersecurity, and remote sensing work.
+        </p>
       </div>
-    </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-grid">
+
+        <article class="project-card animate-on-scroll">
+          <div class="project-visual stats-bg">
+            <div class="visual-badge"><i class="fa-solid fa-globe"></i> Live Data App</div>
+            <div class="visual-lines"></div>
+            <div class="visual-content">
+              <span>Stats from the World</span>
+              <h3>Interactive world indicators dashboard</h3>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-topline">
+              <span class="project-pill">Featured</span>
+              <span class="project-pill subtle">Streamlit</span>
+            </div>
+            <h2>Stats from the World</h2>
+            <p>
+              A deployed global analytics dashboard for exploring country-level indicators, rankings, cost-of-living insights,
+              and cross-country comparisons through interactive charts and maps.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>ETL</span><span>Pandas</span><span>Plotly</span><span>Data Visualization</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://stats-from-the-world-34vkcmkxtqwtzi3c9wnfaq.streamlit.app/" target="_blank" class="btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+            <details class="project-details">
+              <summary>Project overview</summary>
+              <div class="markdown-body">
+                <h4>What it does</h4>
+                <p>
+                  This project turns public global indicator data into a clean decision-support dashboard. Users can browse rankings,
+                  compare countries, inspect economic and health-related metrics, and interact with maps and charts instead of static tables.
+                </p>
+                <h4>Why it matters</h4>
+                <p>
+                  It shows end-to-end product thinking: data cleaning, feature organization, visual storytelling, and deployment as a usable web app.
+                  It is especially strong for data analyst, data scientist, and AI engineer portfolios because it feels like a finished product rather than only a notebook.
+                </p>
+                <h4>Key highlights</h4>
+                <ul>
+                  <li>Interactive dashboards with country comparison flows</li>
+                  <li>Visual ranking and map-based exploration</li>
+                  <li>Deployed online for recruiters to test immediately</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project-card animate-on-scroll">
+          <div class="project-visual security-bg">
+            <div class="visual-badge"><i class="fa-solid fa-shield-halved"></i> Security Automation</div>
+            <div class="visual-content">
+              <span>WebSecScore</span>
+              <h3>Domain risk scoring and security checks</h3>
+            </div>
+          </div>
+          <div class="project-body">
+            <h2>WebSecScore</h2>
+            <p>
+              A web application security assessment framework that scans domains, aggregates findings, and produces security-oriented risk scores.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>OWASP</span><span>NIST</span><span>API Integration</span><span>Automation</span><span>Security Testing</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/HamzaKaddour/WebSecScore" target="_blank" class="btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub Repo
+              </a>
+            </div>
+            <details class="project-details">
+              <summary>Project overview</summary>
+              <div class="markdown-body">
+                <h4>What it does</h4>
+                <p>
+                  WebSecScore evaluates websites through automated tests and consolidates the results into a single security score to help prioritize remediation.
+                </p>
+                <h4>What it demonstrates</h4>
+                <ul>
+                  <li>Security automation and reproducible scanning workflows</li>
+                  <li>Integration of multiple signals into one usable output</li>
+                  <li>Practical productization of cybersecurity research</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project-card animate-on-scroll">
+          <div class="project-visual remote-bg">
+            <div class="visual-badge"><i class="fa-solid fa-satellite"></i> Remote Sensing AI</div>
+            <div class="visual-content">
+              <span>SAR River Ice Segmentation</span>
+              <h3>Weakly supervised segmentation pipeline</h3>
+            </div>
+          </div>
+          <div class="project-body">
+            <h2>SAR River Ice Segmentation</h2>
+            <p>
+              A machine learning pipeline for segmenting river ice from Synthetic Aperture Radar (SAR) imagery using weak labels derived from optical products and geospatial preprocessing.
+            </p>
+            <div class="project-tags">
+              <span>PyTorch</span><span>MLOPS</span><span>GIS</span><span>Weak Supervision</span><span>Segmentation</span><span>Remote Sensing</span><span>GDAL</span><span>rasterio</span><span>Google Earth Engine</span><span>AWS</span>
+            </div>
+            <details class="project-details">
+              <summary>Project overview</summary>
+              <div class="markdown-body">
+                <h4>Core workflow</h4>
+                <p>
+                  The project couples satellite preprocessing, label generation, and segmentation modeling to support river-ice monitoring in environments where precise labels are scarce.
+                </p>
+                <h4>Why it stands out</h4>
+                <ul>
+                  <li>Combines Earth observation data engineering with deep learning</li>
+                  <li>Uses domain knowledge instead of relying only on fully manual labels</li>
+                  <li>Relevant to environmental AI, geospatial analytics, and scientific ML</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project-card animate-on-scroll">
+          <div class="project-visual iot-bg">
+            <div class="visual-badge"><i class="fa-solid fa-microchip"></i> Cyber + ML</div>
+            <div class="visual-content">
+              <span>Deep Learning in IoT Intrusion Detection Systems</span>
+              <h3>ML, DL, and RL for network threat detection</h3>
+            </div>
+          </div>
+          <div class="project-body">
+            <h2>Deep Learning in IoT Intrusion Detection Systems</h2>
+            <p>
+              Research work evaluating classical machine learning, deep learning, and reinforcement learning approaches for attack detection on IoT security datasets.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>ML</span><span>Deep Learning</span><span>Reinforcement Learning</span><span>Cybersecurity</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/HamzaKaddour/DL_ML_IoT_Security" target="_blank" class="btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub Repo
+              </a>
+            </div>
+            <details class="project-details">
+              <summary>Project overview</summary>
+              <div class="markdown-body">
+                <h4>Focus</h4>
+                <p>
+                  This project compares different learning paradigms for intrusion detection, emphasizing performance trade-offs and practical security relevance.
+                </p>
+                <h4>Contributions</h4>
+                <ul>
+                  <li>Shows experimentation across multiple modeling families</li>
+                  <li>Connects AI work to a real security use case</li>
+                  <li>Good evidence of research and evaluation skills</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project-card animate-on-scroll">
+          <div class="project-visual wire">
+            <div class="visual-badge"><i class="fa-solid fa-eye"></i> Computer Vision</div>
+            <div class="visual-content">
+              <span>Wire and Transmission Lines Detection using YOLO</span>
+              <h3>Computer Vision Techniques for object detection</h3>
+            </div>
+          </div>
+          <div class="project-body">
+            <h2>Wire and Transmission Lines Detection using YOLO</h2>
+            <p>
+              Computer vision project for detecting power lines and transmission towers in aerial imagery using YOLOv5, YOLOv8, and YOLOv11, evaluated on the TTPLA dataset.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Computer Vision</span><span>YOLO</span><span>Deep Learning</span><span>Object Detection</span><span>UAV</span><span>Model Benchmarking</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/HamzaKaddour/Wire-Detection-using-YOLO" target="_blank" class="btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub Repo
+              </a>
+            </div>
+            <details class="project-details">
+              <summary>Project overview</summary>
+              <div class="markdown-body">
+                <h4>Focus</h4>
+                <p>
+                This project evaluates modern YOLO-based object detection models for power grid inspection using the TTPLA aerial-image dataset. The workflow covers data preparation, label handling, model training, and evaluation for challenging aerial scenes with complex backgrounds, thin wire structures, and class imbalance. The study compares YOLOv5, YOLOv8, and YOLOv11, with YOLOv8 achieving the strongest overall performance in the reported experiments.
+                </p>
+                <h4>Contributions</h4>
+                <ul>
+                  <li>Evaluated YOLOv5, YOLOv8, and YOLOv11 for aerial power-line detection</li>
+                  <li>Used the TTPLA dataset, which contains high-resolution aerial images with annotated bounding boxes</li>
+                  <li>Addressed challenges such as complex backgrounds, thin wire structures, and class imbalance</li>
+                  <li>Reported that YOLOv8 achieved the best overall precision/recall performance among the tested YOLO variants</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project-card animate-on-scroll">
+          <div class="project-visual polymer-bg">
+            <div class="visual-badge"><i class="fa-solid fa-flask"></i> Applied ML</div>
+            <div class="visual-content">
+              <span>Polymer MFR Prediction</span>
+              <h3>Regression modeling on experimental data</h3>
+            </div>
+          </div>
+          <div class="project-body">
+            <h2>Polymer MFR Prediction</h2>
+            <p>
+              An academic machine learning project for predicting polymer Melt Flow Rate from experimental measurements using regression-based modeling.
+            </p>
+            <div class="project-tags">
+              <span>Regression</span><span>Python</span><span>Data Analysis</span><span>Applied ML</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/HamzaKaddour/PolymerMFR" target="_blank" class="btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub Repo
+              </a>
+            </div>
+            <details class="project-details">
+              <summary>Project overview</summary>
+              <div class="markdown-body">
+                <h4>What it shows</h4>
+                <p>
+                  This project highlights supervised learning on scientific data, including feature handling, regression performance, and interpretation of model outputs.
+                </p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+      </div>
+    </section>
   </main>
 </body>
 </html>

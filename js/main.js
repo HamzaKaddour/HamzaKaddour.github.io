@@ -31,4 +31,20 @@
       }
     });
   });
+
+  // Reveal on scroll
+  const animated = document.querySelectorAll('.animate-on-scroll');
+  if (animated.length && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    animated.forEach(el => observer.observe(el));
+  } else {
+    animated.forEach(el => el.classList.add('in-view'));
+  }
 })();
