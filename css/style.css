@@ -331,8 +331,9 @@ a {
   width: fit-content;
   font-size: 0.88rem;
   padding: 0.35rem 0.7rem;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(10, 10, 18, 0.25);
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(10, 10, 18, 0.28);
+  color: rgba(255,255,255,0.96);
   border-radius: 999px;
   backdrop-filter: blur(6px);
 }
@@ -440,12 +441,45 @@ a {
 .markdown-body ul {
   padding-left: 1.1rem;
 }
-.stats-bg { background: linear-gradient(135deg, #10223f, #1e4fa6 55%, #23a6d5); color: #f8fbff; }
-.security-bg { background: linear-gradient(135deg, #0d1b2a, #19376d 55%, #3a7bd5); color: #f8fbff; }
-.remote-bg { background: linear-gradient(135deg, #0d1f1a, #14532d 55%, #22c55e); color: #f4fff7; }
-.iot-bg { background: linear-gradient(135deg, #231942, #5e548e 52%, #9f86c0); color: #fbf9ff; }
-.wire { background: linear-gradient(135deg, #0F172A, #1E3A8A); color: #fbf9ff; }
-.polymer-bg { background: linear-gradient(135deg, #301934, #7b2cbf 55%, #c77dff); color: #fff8ff; }
+.stats-bg {
+  background: linear-gradient(135deg, #10223f, #1e4fa6 55%, #23a6d5);
+  color: #f8fbff;
+}
+
+.security-bg {
+  background: linear-gradient(135deg, #0d1b2a, #19376d 55%, #3a7bd5);
+  color: #f8fbff;
+}
+
+.remote-bg {
+  background: linear-gradient(135deg, #0d1f1a, #14532d 55%, #22c55e);
+  color: #f4fff7;
+}
+
+.iot-bg {
+  background: linear-gradient(135deg, #231942, #5e548e 52%, #9f86c0);
+  color: #fbf9ff;
+}
+
+.wire {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a 58%, #3b82f6);
+  color: #f8fbff;
+}
+
+.polymer-bg {
+  background: linear-gradient(135deg, #3b0764, #7e22ce 55%, #d946ef);
+  color: #fff8ff;
+}
+
+.rl-bg {
+  background: linear-gradient(135deg, #1e1b4b, #312e81 55%, #6366f1);
+  color: #f8faff;
+}
+
+.cps-bg {
+  background: linear-gradient(135deg, #0f172a, #134e4a 55%, #14b8a6);
+  color: #f3fffd;
+}
 
 /* ===== Reveal animation ===== */
 .animate-on-scroll {
