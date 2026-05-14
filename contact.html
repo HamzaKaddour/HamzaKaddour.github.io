@@ -4,10 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Hamza Kaddour</title>
+  <meta name="description" content="Contact Hamza Kaddour for AI, ML engineering, software engineering, data science, and research collaboration opportunities." />
   <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="assets/img/Me Professional.JPG" />
-
+  <script defer src="js/main.js"></script>
 </head>
 <body>
   <header class="navbar">
@@ -15,25 +17,121 @@
       <a class="brand" href="index.html">Hamza Kaddour</a>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <!-- <a href="resume.html">Resume</a> -->
         <a href="projects.html">Projects</a>
         <a href="publications.html">Publications</a>
         <a href="contact.html" class="active">Contact</a>
-        <button id="themeToggle">🌙</button>
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
       </nav>
     </div>
   </header>
 
-  <main class="section">
-    <div class="container center">
-      <h1>Get in Touch</h1>
-      <p>Email: <a href="mailto:hamzakaddour1998@gmail.com">hamzakaddour1998@gmail.com</a></p>
-      <p>Academic: hkaddour@stevens.edu | hamzakaddour@isu.edu</p>
-      <p>
-        <a href="https://github.com/HamzaKaddour" target="_blank">GitHub</a> | 
-        <a href="https://www.linkedin.com/in/hamzakaddour/" target="_blank">LinkedIn</a>
-      </p>
-    </div>
+  <main>
+    <section class="contact-hero section">
+      <div class="container contact-hero-grid">
+        <div class="contact-copy animate-on-scroll">
+          <span class="eyebrow">Contact</span>
+          <h1>Let’s connect.</h1>
+          <p>
+            I am open to conversations around AI/ML engineering, data science, software engineering,
+            cloud-based ML systems, LLM/RAG evaluation, MLOps, cybersecurity automation, and applied research collaborations.
+          </p>
+          <div class="contact-actions">
+            <a class="btn" href="mailto:hamzakaddour1998@gmail.com?subject=Portfolio%20Inquiry%20-%20Hamza%20Kaddour">
+              <i class="fa-solid fa-envelope"></i> Email Me
+            </a>
+            <a class="btn-outline" href="assets/docs/cv.pdf" target="_blank">
+              <i class="fa-solid fa-file-arrow-down"></i> Download CV
+            </a>
+          </div>
+        </div>
+
+        <aside class="contact-status animate-on-scroll">
+          <div class="status-pulse"></div>
+          <h2>Available for selected opportunities</h2>
+          <p>ML Engineering · AI Engineering · Data Science · Software Engineering</p>
+          <span>Based in the United States</span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section contact-main-section">
+      <div class="container contact-grid">
+        <article class="contact-panel contact-methods animate-on-scroll">
+          <div class="panel-heading-clean">
+            <span class="eyebrow">Reach me</span>
+            <h2>Contact channels</h2>
+          </div>
+
+          <a class="contact-row" href="mailto:hamzakaddour1998@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Primary email</strong>
+              <span>hamzakaddour1998@gmail.com</span>
+            </div>
+          </a>
+
+          <a class="contact-row" href="mailto:hkaddour@stevens.edu">
+            <i class="fa-solid fa-building-columns"></i>
+            <div>
+              <strong>Academic email</strong>
+              <span>hkaddour@stevens.edu</span>
+            </div>
+          </a>
+
+          <a class="contact-row" href="mailto:hamzakaddour@isu.edu">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+              <strong>Previous academic email</strong>
+              <span>hamzakaddour@isu.edu</span>
+            </div>
+          </a>
+
+          <a class="contact-row" href="https://www.linkedin.com/in/hamzakaddour/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/hamzakaddour</span>
+            </div>
+          </a>
+
+          <a class="contact-row" href="https://github.com/HamzaKaddour" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <strong>GitHub</strong>
+              <span>github.com/HamzaKaddour</span>
+            </div>
+          </a>
+
+          <a class="contact-row" href="https://scholar.google.com/citations?user=UCvVMnEAAAAJ&hl=en" target="_blank">
+            <i class="fa-brands fa-google"></i>
+            <div>
+              <strong>Google Scholar</strong>
+              <span>Publications and citations</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="contact-panel animate-on-scroll">
+          <div class="panel-heading-clean">
+            <span class="eyebrow">Best fit</span>
+            <h2>Areas I can contribute to</h2>
+          </div>
+          <div class="fit-grid">
+            <div><i class="fa-solid fa-robot"></i><strong>AI / ML Engineering</strong><span>Model development, evaluation, deployment, monitoring, and production-oriented ML systems.</span></div>
+            <div><i class="fa-solid fa-chart-line"></i><strong>Data Science</strong><span>Data pipelines, analysis, experiments, metrics, and decision-support dashboards.</span></div>
+            <div><i class="fa-solid fa-code"></i><strong>Software Engineering</strong><span>Python, JavaScript, backend automation, APIs, testing, and cloud-aware development.</span></div>
+            <div><i class="fa-solid fa-shield-halved"></i><strong>Security Automation</strong><span>Risk scoring, vulnerability workflows, secure pipelines, and cybersecurity analytics.</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer center">
+    <small>
+      © <span id="year"></span> Hamza Kaddour |
+      <a href="mailto:hamzakaddour1998@gmail.com">Contact</a>
+    </small>
+  </footer>
 </body>
 </html>
