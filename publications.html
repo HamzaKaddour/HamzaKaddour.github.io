@@ -4,10 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Publications — Hamza Kaddour</title>
+  <meta name="description" content="Selected publications by Hamza Kaddour in reinforcement learning, 5G/6G networks, cybersecurity, IoT, and cyber-physical systems." />
   <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/publications.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="assets/img/Me Professional.JPG" />
-
+  <script defer src="js/main.js"></script>
 </head>
 <body>
   <header class="navbar">
@@ -15,65 +17,114 @@
       <a class="brand" href="index.html">Hamza Kaddour</a>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <!-- <a href="resume.html">Resume</a> -->
         <a href="projects.html">Projects</a>
         <a href="publications.html" class="active">Publications</a>
         <a href="contact.html">Contact</a>
-        <button id="themeToggle">🌙</button>
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
       </nav>
     </div>
   </header>
 
-  <!-- <main class="section">
-    <div class="container">
-      <h1>Publications</h1>
-      <ul class="pubs">
-        <li><strong>Evaluating the Performance of ML-Based Classification Models for IoT Intrusion Detection</strong> — IEEE ORSS 2024.</li>
-        <li><strong>Altering 5G Network Parameters Using Deep Reinforcement Learning to Optimize QoS and Security</strong> — IEEE VCC 2024.</li>
-        <li><strong>QoS_5G_Sec Dataset: Comprehensive Analysis of QoS and Security in 5G Architectures</strong>.</li>
-        <li><strong>Generalizable DRL-Based Intelligent Handover in Indoor WiGig Networks</strong> — IEEE VTC 2025.</li>
-      </ul>
-    </div>
-  </main> -->
-<main class="section"> 
-  <!-- <section> -->
-    <div class="container">
-  <h2>Publications</h2>
+  <main>
+    <section class="section publications-hero">
+      <div class="container publications-hero-grid">
+        <div class="animate-on-scroll">
+          <span class="eyebrow">Research</span>
+          <h1>Publications</h1>
+          <p>
+            Selected research outputs spanning deep reinforcement learning, wireless networks, cybersecurity,
+            IoT intrusion detection, and cyber-physical systems security.
+          </p>
+        </div>
+        <aside class="scholar-card animate-on-scroll">
+          <i class="fa-brands fa-google"></i>
+          <h2>Google Scholar</h2>
+          <p>View the full citation profile and publication record.</p>
+          <a class="btn" href="https://scholar.google.com/citations?user=UCvVMnEAAAAJ&hl=en" target="_blank">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Scholar Profile
+          </a>
+        </aside>
+      </div>
+    </section>
 
-  <p>
-    Full list available on
-    <a href="https://scholar.google.com/citations?user=UCvVMnEAAAAJ" target="_blank">Google Scholar</a>.
-  </p>
+    <section class="section publications-section">
+      <div class="container publication-grid">
+        <article class="publication-card animate-on-scroll">
+          <div class="publication-meta">
+            <span>IEEE VTC · 2025</span>
+            <span>Deep RL · Wireless Networks</span>
+          </div>
+          <h2>Generalizable Deep Reinforcement Learning-Based Intelligent Handover in Indoor WiGig Networks</h2>
+          <p class="authors">Hamza Kaddour et al.</p>
+          <p>
+            Investigates DQN, PPO, and A2C agents for robust handover decision-making in indoor 60GHz WiGig environments under mobility and dynamic channel conditions.
+          </p>
+          <ul>
+            <li>Focuses on generalization across user-density and mobility scenarios.</li>
+            <li>Compares multiple DRL algorithms and hyperparameter-tuning strategies.</li>
+            <li>Targets practical wireless-network optimization for 5G/6G systems.</li>
+          </ul>
+        </article>
 
-  <ul class="publications">
-    <li>
-      <strong>Evaluating the Performance of Machine Learning-Based Classification Models for IoT Intrusion Detection</strong><br>
-      Hamza Kaddour et al.<br>
-      IEEE Opportunity Research Scholars Symposium (ORSS), 2024.
-    </li>
+        <article class="publication-card animate-on-scroll">
+          <div class="publication-meta">
+            <span>IEEE VCC · 2024</span>
+            <span>5G · Security · Optimization</span>
+          </div>
+          <h2>Altering 5G Network Parameters Using Deep Reinforcement Learning to Optimize QoS and Security</h2>
+          <p class="authors">Hamza Kaddour et al.</p>
+          <p>
+            Formulates the QoS–security trade-off in 5G networks as a reinforcement learning problem for adaptive network-parameter control.
+          </p>
+          <ul>
+            <li>Balances performance and security objectives under changing network states.</li>
+            <li>Applies DRL to dynamic parameter optimization.</li>
+            <li>Connects AI-based control with secure network management.</li>
+          </ul>
+        </article>
 
-    <li>
-      <strong>Altering 5G Network Parameters Using Deep Reinforcement Learning to Optimize QoS and Security</strong><br>
-      Hamza Kaddour et al.<br>
-      IEEE Virtual Conference on Communications (VCC), 2024.
-    </li>
+        <article class="publication-card animate-on-scroll">
+          <div class="publication-meta">
+            <span>AIBThings · 2025</span>
+            <span>CPS · Cybersecurity · RL</span>
+          </div>
+          <h2>Multi-Domain Deep Reinforcement Learning for Cyber-Physical Systems Security on the WDT Testbed Dataset</h2>
+          <p class="authors">Hamza Kaddour et al.</p>
+          <p>
+            Explores a multi-domain reinforcement learning approach for cyber-physical system security using both cyber and physical process signals.
+          </p>
+          <ul>
+            <li>Uses cyber and physical indicators for improved situational awareness.</li>
+            <li>Targets anomaly detection and response in operational testbed data.</li>
+            <li>Bridges AI, IoT security, and CPS resilience.</li>
+          </ul>
+        </article>
 
-    <li>
-      <strong>Generalizable Deep Reinforcement Learning-Based Intelligent Handover in Indoor WiGig Networks</strong><br>
-      Hamza Kaddour et al.<br>
-      IEEE Vehicular Technology Conference (VTC), 2025.
-    </li>
+        <article class="publication-card animate-on-scroll">
+          <div class="publication-meta">
+            <span>IEEE ORSS · 2024</span>
+            <span>IoT · ML · Intrusion Detection</span>
+          </div>
+          <h2>Evaluating the Performance of Machine Learning-Based Classification Models for IoT Intrusion Detection</h2>
+          <p class="authors">Hamza Kaddour et al.</p>
+          <p>
+            Compares machine learning, deep learning, and reinforcement learning approaches for network intrusion detection in IoT security settings.
+          </p>
+          <ul>
+            <li>Evaluates multiple model families for attack classification.</li>
+            <li>Connects model performance to practical IoT security needs.</li>
+            <li>Highlights comparative evaluation and security-oriented experimentation.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    <li>
-      <strong>Multi-Domain Deep Reinforcement Learning for Cyber-Physical Systems Security on the WDT Testbed Dataset</strong><br>
-      Hamza Kaddour et al.<br>
-      International Conference on AI, Blockchain, and IoT (AIBThings), 2025.
-    </li>
-  </ul>
-<!-- </section> -->
- </div>
-</main>
-
-
+  <footer class="site-footer center">
+    <small>
+      © <span id="year"></span> Hamza Kaddour |
+      <a href="mailto:hamzakaddour1998@gmail.com">Contact</a>
+    </small>
+  </footer>
 </body>
 </html>
