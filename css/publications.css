@@ -1,0 +1,115 @@
+.publications-hero {
+  padding-top: 1.4rem;
+}
+
+.publications-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.publications-hero h1 {
+  margin: 0 0 .75rem;
+  font-size: clamp(2.35rem, 6vw, 4.8rem);
+  line-height: .96;
+  letter-spacing: -.06em;
+}
+
+.publications-hero p {
+  max-width: 790px;
+  font-size: 1.05rem;
+  opacity: .9;
+}
+
+.scholar-card,
+.publication-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.scholar-card {
+  padding: 1.4rem;
+  display: grid;
+  align-content: end;
+  min-height: 260px;
+  background: linear-gradient(135deg, #1e1b4b, #312e81 55%, #6366f1);
+  color: #f8faff;
+}
+
+.scholar-card i.fa-google {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.scholar-card h2 {
+  margin: 0 0 .45rem;
+}
+
+.scholar-card p {
+  opacity: .88;
+  margin-bottom: .8rem;
+}
+
+.publications-section {
+  padding-top: .6rem;
+}
+
+.publication-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.publication-card {
+  padding: 1.25rem;
+}
+
+.publication-card h2 {
+  margin: .65rem 0 .45rem;
+  color: var(--accent);
+  line-height: 1.18;
+}
+
+.publication-card p {
+  margin: .35rem 0 .75rem;
+}
+
+.publication-card .authors {
+  font-weight: 700;
+  opacity: .85;
+}
+
+.publication-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+
+.publication-meta span {
+  padding: .28rem .65rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 13%, transparent);
+  font-size: .8rem;
+  font-weight: 750;
+}
+
+.publication-card ul {
+  margin: .6rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.publication-card li {
+  margin-bottom: .35rem;
+}
+
+@media (max-width: 900px) {
+  .publications-hero-grid,
+  .publication-grid {
+    grid-template-columns: 1fr;
+  }
+}
