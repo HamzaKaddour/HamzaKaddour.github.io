@@ -36,36 +36,6 @@
     link.classList.toggle("active", href === currentPage || (currentPage === "" && href === "index.html"));
   });
 
-  // Homepage positioning updates
-  if (currentPage === "index.html" || currentPage === "") {
-    const tagline = document.querySelector(".tagline");
-    if (tagline) tagline.textContent = "AI / ML Engineer • Software Engineer • Data Scientist";
-
-    const heroCopy = document.querySelector(".home-hero-copy");
-    if (heroCopy) {
-      heroCopy.innerHTML =
-        "I build applied AI and software systems across machine learning, cloud automation, cybersecurity, and satellite data analytics. My work combines model development, data pipelines, deployment workflows, and security-aware engineering.";
-    }
-
-    const selectedProjects = document.querySelector(".compact-links");
-    if (selectedProjects && !selectedProjects.dataset.enhanced) {
-      selectedProjects.dataset.enhanced = "true";
-      selectedProjects.insertAdjacentHTML(
-        "afterbegin",
-        `
-        <li>
-          <a href="https://hamzakaddour.github.io/ragops-evaluation-dashboard/" target="_blank">RAGOps Evaluation Dashboard</a>
-          <span>LLMOps dashboard for retrieval, grounding, hallucination risk, and RAG evaluation</span>
-        </li>
-        <li>
-          <a href="https://hamzakaddour.github.io/mlops-monitoring-dashboard/" target="_blank">MLOps Monitoring Dashboard</a>
-          <span>Model performance, drift, prediction monitoring, alerting, and model-card reporting</span>
-        </li>
-        `
-      );
-    }
-  }
-
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => {
