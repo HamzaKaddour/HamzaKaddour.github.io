@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projects — Hamza Kaddour</title>
-  <meta name="description" content="Selected software, AI, cybersecurity, and remote sensing projects by Hamza Kaddour." />
+  <title>Projects — Hamza Kaddour | Machine Learning Engineer</title>
+  <meta name="description" content="Selected AI, MLOps, LLMOps, GeoAI, software engineering, and cybersecurity projects by Hamza Kaddour." />
+  <meta property="og:title" content="Projects — Hamza Kaddour" />
+  <meta property="og:description" content="Production-minded AI, MLOps, LLMOps, GeoAI, and software engineering projects." />
+  <meta property="og:image" content="https://hamzakaddour.github.io/assets/img/og-preview.png" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="icon" type="image/png" href="assets/img/Me Professional.JPG" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
 
   <!-- <script defer src="js/theme.js"></script> -->
   <script defer src="js/main.js"></script>
@@ -20,9 +23,9 @@
       <nav class="nav">
         <a href="index.html">Home</a>
         <!-- <a href="resume.html">Resume</a> -->
-        <a href="projects.html">Projects</a>
+        <a href="projects.html" class="active">Projects</a>
         <a href="publications.html">Publications</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html">Contact</a>
         <button id="themeToggle">🌙</button>
       </nav>
     </div>
@@ -58,14 +61,14 @@
             </div>
             <h2>RAGOps Evaluation Dashboard</h2>
             <p>
-              A production-style dashboard for evaluating Retrieval-Augmented Generation (RAG) systems across retrieval quality,
-              answer grounding, citation coverage, hallucination risk, latency, and cost trade-offs.
+              A local-first RAG engineering system with BM25, dense and hybrid retrieval, cross-encoder reranking, local generation,
+              groundedness and citation checks, abstention logic, evaluation traces, and a FastAPI query endpoint.
             </p>
             <div class="project-tags">
-              <span>RAG</span><span>LLMOps</span><span>Semantic Search</span><span>AI Evaluation</span><span>Observability</span><span>Python</span><span>GitHub Pages</span>
+              <span>RAG</span><span>LLMOps</span><span>FastAPI</span><span>FAISS</span><span>Hugging Face</span><span>Qwen</span><span>Reranking</span><span>Evaluation</span>
             </div>
             <div class="project-actions">
-              <a href="https://hamzakaddour.github.io/ragops-evaluation-dashboard/" target="_blank" class="btn">
+              <a href="https://hamzakaddour.github.io/ragops-evaluation-dashboard/" target="_blank" rel="noopener noreferrer" class="btn">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Dashboard
               </a>
             </div>
@@ -84,9 +87,9 @@
                 </p>
                 <h4>Key highlights</h4>
                 <ul>
-                  <li>Uses a labeled mini corpus and query set to generate evaluation artifacts</li>
-                  <li>Visualizes retrieval and answer reliability metrics through an interactive static dashboard</li>
-                  <li>Demonstrates practical LLMOps concepts without requiring a paid backend</li>
+                  <li>Benchmarks BM25, dense, hybrid, and reranked retrieval using Recall, MRR, nDCG, and latency metrics</li>
+                  <li>Evaluates groundedness, citation validity, coverage, and abstention behavior across end-to-end queries</li>
+                  <li>Runs local open-source generation and exposes the pipeline through FastAPI without paid model APIs</li>
                 </ul>
               </div>
             </details>
@@ -109,14 +112,14 @@
             </div>
             <h2>MLOps Monitoring Dashboard</h2>
             <p>
-              A production-style monitoring console for tracking model performance, data drift, prediction behavior, alert status,
-              and model-card metadata for a customer churn risk classifier.
+              An end-to-end local MLOps demonstration covering candidate training, MLflow experiment tracking and model selection,
+              FastAPI serving, SQLite prediction logging, Evidently drift analysis, Prometheus telemetry, and retraining-policy logic.
             </p>
             <div class="project-tags">
-              <span>MLOps</span><span>Model Monitoring</span><span>Data Drift</span><span>Model Card</span><span>Machine Learning</span><span>Python</span><span>GitHub Pages</span>
+              <span>MLOps</span><span>MLflow</span><span>Evidently</span><span>Prometheus</span><span>FastAPI</span><span>SQLite</span><span>scikit-learn</span><span>CI</span>
             </div>
             <div class="project-actions">
-              <a href="https://hamzakaddour.github.io/mlops-monitoring-dashboard/" target="_blank" class="btn">
+              <a href="https://hamzakaddour.github.io/mlops-monitoring-dashboard/" target="_blank" rel="noopener noreferrer" class="btn">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Dashboard
               </a>
             </div>
@@ -125,19 +128,19 @@
               <div class="markdown-body">
                 <h4>What it does</h4>
                 <p>
-                  The dashboard monitors a deployed ML model using training, validation, and production performance windows, feature-level drift scores,
-                  prediction-volume trends, alert rules, and a structured model card.
+                  The repository trains and selects a real local classifier, serves it through FastAPI, records prediction events, and exposes monitoring signals.
+                  The portfolio dashboard combines those verified results with explicitly labeled synthetic monitoring windows for drift and degradation scenarios.
                 </p>
                 <h4>Why it matters</h4>
                 <p>
-                  The project demonstrates the post-training side of machine learning engineering: observing deployed models, detecting degradation,
-                  summarizing operational risk, and documenting model behavior for governance and review.
+                  The project demonstrates the engineering around a model lifecycle: experiment tracking, serving, prediction logging, feature-drift analysis,
+                  inference telemetry, CI validation, governance metadata, and retraining decision logic.
                 </p>
                 <h4>Key highlights</h4>
                 <ul>
-                  <li>Tracks model quality with AUC, F1, accuracy, precision, recall, and log-loss metrics</li>
-                  <li>Includes data drift ranking, production alerting, prediction monitoring, and model-card reporting</li>
-                  <li>Uses lightweight Python-generated artifacts with a fully static deployed dashboard</li>
+                  <li>Tracks three candidate models with MLflow and publishes held-out evaluation for the selected classifier</li>
+                  <li>Uses Evidently for PSI-based drift checks and Prometheus-format inference counters and latency histograms</li>
+                  <li>Separates real training/inference behavior from simulated monitoring windows and validates the workflow in GitHub Actions</li>
                 </ul>
               </div>
             </details>
@@ -167,7 +170,7 @@
               <span>Python</span><span>ETL</span><span>Pandas</span><span>Plotly</span><span>Data Visualization</span>
             </div>
             <div class="project-actions">
-              <a href="https://stats-from-the-world-34vkcmkxtqwtzi3c9wnfaq.streamlit.app/" target="_blank" class="btn">
+              <a href="https://stats-from-the-world-34vkcmkxtqwtzi3c9wnfaq.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo (sometimes needs manual start)
               </a>
             </div>
@@ -212,7 +215,7 @@
               <span>Python</span><span>OWASP</span><span>NIST</span><span>API Integration</span><span>Automation</span><span>Security Testing</span>
             </div>
             <div class="project-actions">
-              <a href="https://github.com/HamzaKaddour/WebSecScore" target="_blank" class="btn-outline">
+              <a href="https://github.com/HamzaKaddour/WebSecScore" target="_blank" rel="noopener noreferrer" class="btn-outline">
                 <i class="fa-brands fa-github"></i> GitHub Repo
               </a>
             </div>
@@ -285,7 +288,7 @@
               <span>Python</span><span>Reinforcement Learning</span><span>Wireless Networks</span><span>5G/6G</span><span>Optimization</span>
             </div>
             <div class="project-actions">
-              <a href="https://github.com/HamzaKaddour/Generalizable_Deep_RL_Smart_Handover_5G-" target="_blank" class="btn-outline">
+              <a href="https://github.com/HamzaKaddour/Generalizable_Deep_RL_Smart_Handover_5G-" target="_blank" rel="noopener noreferrer" class="btn-outline">
                 <i class="fa-brands fa-github"></i> GitHub Repo
               </a>
             </div>
@@ -325,7 +328,7 @@
             <span>Python</span><span>Reinforcement Learning</span><span>5G</span><span>Cybersecurity</span><span>Optimization</span>
           </div>
           <div class="project-actions">
-            <a href="https://github.com/HamzaKaddour/QoS-_5G_Trade-off_balance_using_Deep_Reinforcement_Learning" target="_blank" class="btn-outline">
+            <a href="https://github.com/HamzaKaddour/QoS-_5G_Trade-off_balance_using_Deep_Reinforcement_Learning" target="_blank" rel="noopener noreferrer" class="btn-outline">
               <i class="fa-brands fa-github"></i> GitHub Repo
             </a>
           </div>
@@ -364,7 +367,7 @@
           <span>Python</span><span>Reinforcement Learning</span><span>CPS</span><span>Cybersecurity</span><span>IoT</span>
         </div>
         <div class="project-actions">
-          <a href="https://github.com/HamzaKaddour/Hybrid_Reinforcement_Learning_for_Cyber_Physical_Systems" target="_blank" class="btn-outline">
+          <a href="https://github.com/HamzaKaddour/Hybrid_Reinforcement_Learning_for_Cyber_Physical_Systems" target="_blank" rel="noopener noreferrer" class="btn-outline">
             <i class="fa-brands fa-github"></i> GitHub Repo
           </a>
         </div>
@@ -404,7 +407,7 @@
               <span>Python</span><span>ML</span><span>Deep Learning</span><span>Reinforcement Learning</span><span>Cybersecurity</span>
             </div>
             <div class="project-actions">
-              <a href="https://github.com/HamzaKaddour/DL_ML_IoT_Security" target="_blank" class="btn-outline">
+              <a href="https://github.com/HamzaKaddour/DL_ML_IoT_Security" target="_blank" rel="noopener noreferrer" class="btn-outline">
                 <i class="fa-brands fa-github"></i> GitHub Repo
               </a>
             </div>
@@ -443,7 +446,7 @@
               <span>Python</span><span>Computer Vision</span><span>YOLO</span><span>Deep Learning</span><span>Object Detection</span><span>UAV</span><span>Model Benchmarking</span>
             </div>
             <div class="project-actions">
-              <a href="https://github.com/HamzaKaddour/Wire-Detection-using-YOLO" target="_blank" class="btn-outline">
+              <a href="https://github.com/HamzaKaddour/Wire-Detection-using-YOLO" target="_blank" rel="noopener noreferrer" class="btn-outline">
                 <i class="fa-brands fa-github"></i> GitHub Repo
               </a>
             </div>
@@ -483,7 +486,7 @@
               <span>Regression</span><span>Python</span><span>Data Analysis</span><span>Applied ML</span>
             </div>
             <div class="project-actions">
-              <a href="https://github.com/HamzaKaddour/PolymerMFR" target="_blank" class="btn-outline">
+              <a href="https://github.com/HamzaKaddour/PolymerMFR" target="_blank" rel="noopener noreferrer" class="btn-outline">
                 <i class="fa-brands fa-github"></i> GitHub Repo
               </a>
             </div>
