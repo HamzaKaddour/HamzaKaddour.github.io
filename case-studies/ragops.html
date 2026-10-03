@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RAGOps Evaluation Dashboard — Case Study</title><meta name="description" content="Case study: RAG evaluation and observability system by Hamza Kaddour."><link rel="stylesheet" href="../css/style.css"><link rel="icon" type="image/png" href="../assets/img/favicon.png"><script defer src="../js/main.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></head><body><header class="navbar"><div class="container row between center"><a class="brand" href="../index.html">Hamza Kaddour</a><nav class="nav"><a href="../index.html">Home</a><a href="../projects.html" class="active">Projects</a><a href="../publications.html">Publications</a><button id="themeToggle" aria-label="Toggle theme">🌙</button></nav></div></header><main><section class="case-hero"><div class="container"><span class="hub-kicker">Case study · RAG + LLM reliability</span><h1>RAGOps Evaluation Dashboard</h1><p>A local-first RAG evaluation platform designed around measurable retrieval quality, grounded generation, citation behavior, abstention, and traceability rather than a one-off chatbot demo.</p><div class="case-meta"><div><strong>Retrieval</strong><span>BM25 + dense + hybrid</span></div><div><strong>Reranking</strong><span>CrossEncoder</span></div><div><strong>Generation</strong><span>Local Qwen</span></div><div><strong>Serving</strong><span>FastAPI + SQLite traces</span></div></div><div class="hub-actions"><a class="btn" href="https://hamzakaddour.github.io/ragops-evaluation-dashboard/" target="_blank" rel="noopener">Live dashboard</a><a class="btn-outline" href="https://github.com/HamzaKaddour/ragops-evaluation-dashboard" target="_blank" rel="noopener">GitHub</a></div></div></section><section class="section"><div class="container case-layout"><article class="case-body"><h2>Problem</h2><p>RAG systems can appear convincing while failing on retrieval, grounding, citation coverage, or refusal behavior. The project was built to make those failure modes measurable and inspectable.</p><h2>Architecture</h2><div class="arch-box">Corpus
+ |---------------------|
+ v                     v
+BM25          SentenceTransformers + FAISS
+ |                     |
+ +----------+----------+
+            v
+      Hybrid retrieval
+            |
+      CrossEncoder rerank
+            |
+   retrieval-confidence gate
+            |
+         local Qwen
+            |
+   answer + source assignment
+      /             \
+ citation checks   groundedness
+      \             /
+       SQLite traces
+            |
+          FastAPI</div><h2>Evaluation-driven iteration</h2><p>The project intentionally records benchmark regressions and improvements. Weak citation coverage, grounding, and abstention behavior in earlier iterations led to a retrieval-confidence gate, tighter generation constraints, and deterministic sentence-level source assignment.</p><table class="proof-table"><thead><tr><th>Metric</th><th>final-v1</th><th>final-v3</th></tr></thead><tbody><tr><td>Behavior accuracy</td><td>91.7%</td><td>100%</td></tr><tr><td>Groundedness</td><td>58.0%</td><td>91.7%</td></tr><tr><td>Citation coverage</td><td>18.9%</td><td>95.0%</td></tr><tr><td>Abstention accuracy</td><td>50.0%</td><td>100%</td></tr></tbody></table><h2>Scope discipline</h2><p>The benchmark is a small, purpose-built regression set. The repository explicitly documents that these numbers demonstrate observability and measured iteration rather than broad production performance.</p><h2>Outcome</h2><p>The system demonstrates retrieval engineering, local LLM integration, evaluation semantics, reliability controls, APIs, observability, testing, and transparent benchmark reporting.</p></article><aside class="case-aside"><h3>Stack</h3><p>BM25 · SentenceTransformers · FAISS · CrossEncoder · Qwen · FastAPI · SQLite · pytest · Docker · GitHub Actions</p><h3>Reliability mechanisms</h3><ul><li>retrieval-confidence gate</li><li>citation validation</li><li>citation coverage</li><li>groundedness heuristic</li><li>abstention testing</li><li>trace persistence</li></ul><h3>Cost model</h3><p>Designed to run locally without paid LLM APIs, hosted vector databases, or cloud GPUs.</p></aside></div></section></main></body></html>
