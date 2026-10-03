@@ -1445,3 +1445,49 @@ a {
   .education-pro.edu-isu { grid-template-columns: 1fr; }
   .edu-logo-pro.edu-logo-isu { width: 116px; height: 82px; }
 }
+
+
+/* ===== Final logo refinements ===== */
+.edu-logo-pro.edu-logo-isu {
+  width: 132px;
+  height: 94px;
+  padding: 8px 10px;
+}
+.education-pro.edu-isu {
+  grid-template-columns: 140px minmax(0,1fr);
+}
+.edu-logo-pro.edu-logo-isu img {
+  width: 98%;
+  height: 82%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.edu-logo-pro.edu-logo-supcom {
+  width: 132px;
+  height: 94px;
+  padding: 8px 10px;
+}
+.edu-logo-pro.edu-logo-supcom img {
+  width: 98%;
+  height: 84%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.org-logo-wrap.logo-2sb img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  object-position: center;
+  transform: translateY(-5px) scale(1.08);
+}
+
+@media (max-width: 620px) {
+  .education-pro.edu-isu { grid-template-columns: 1fr; }
+  .edu-logo-pro.edu-logo-isu,
+  .edu-logo-pro.edu-logo-supcom {
+    width: 126px;
+    height: 90px;
+  }
+}
