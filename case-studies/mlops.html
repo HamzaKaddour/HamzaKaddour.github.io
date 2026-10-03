@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MLOps Monitoring Dashboard — Case Study</title><meta name="description" content="Case study: model monitoring and MLOps lifecycle project by Hamza Kaddour."><link rel="stylesheet" href="../css/style.css"><link rel="icon" type="image/png" href="../assets/img/favicon.png"><script defer src="../js/main.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></head><body><header class="navbar"><div class="container row between center"><a class="brand" href="../index.html">Hamza Kaddour</a><nav class="nav"><a href="../index.html">Home</a><a href="../projects.html" class="active">Projects</a><a href="../publications.html">Publications</a><button id="themeToggle" aria-label="Toggle theme">🌙</button></nav></div></header><main><section class="case-hero"><div class="container"><span class="hub-kicker">Case study · MLOps + observability</span><h1>MLOps Monitoring Dashboard</h1><p>A reproducible model lifecycle project connecting experiment tracking, candidate selection, model serving, event logging, drift analysis, runtime metrics, retraining policy, tests, and deployment.</p><div class="case-meta"><div><strong>Tracking</strong><span>MLflow</span></div><div><strong>Serving</strong><span>FastAPI</span></div><div><strong>Drift</strong><span>Evidently + PSI</span></div><div><strong>Telemetry</strong><span>Prometheus + Grafana</span></div></div><div class="hub-actions"><a class="btn" href="https://hamzakaddour.github.io/mlops-monitoring-dashboard/" target="_blank" rel="noopener">Live dashboard</a><a class="btn-outline" href="https://github.com/HamzaKaddour/mlops-monitoring-dashboard" target="_blank" rel="noopener">GitHub</a></div></div></section><section class="section"><div class="container case-layout"><article class="case-body"><h2>Problem</h2><p>A model notebook does not demonstrate what happens after training. This project focuses on the operational lifecycle: selecting a candidate, serving predictions, recording behavior, detecting distribution shifts, exposing telemetry, and deciding when retraining should be considered.</p><h2>Lifecycle</h2><div class="arch-box">Candidate models
+      |
+   MLflow runs
+      |
+ model selection
+      |
+ saved model
+      |
+   FastAPI /predict
+      |
+ SQLite prediction events
+      |
+ +----+--------------+
+ |                   |
+Evidently / PSI   Prometheus metrics
+ |                   |
+ +---------+---------+
+           |
+  monitoring dashboard
+           |
+ retraining recommendation</div><h2>Measured model result</h2><table class="proof-table"><thead><tr><th>Metric</th><th>Result</th></tr></thead><tbody><tr><td>Validation ROC-AUC</td><td>0.7443</td></tr><tr><td>Held-out test ROC-AUC</td><td>0.7487</td></tr><tr><td>Held-out test F1</td><td>0.5329</td></tr></tbody></table><p>The moderate score is deliberate and documented: the project demonstrates lifecycle engineering and monitoring rather than manufacturing an artificially easy benchmark.</p><h2>Operational features</h2><ul><li>Prediction-event persistence</li><li>Structured model card</li><li>PSI utilities for numeric and categorical drift</li><li>Evidently reports</li><li>Prometheus counters, gauges, and latency histograms</li><li>Rule-based retraining status endpoint</li><li>pytest + GitHub Actions CI</li><li>Optional Docker Compose stack with Grafana</li></ul><h2>Outcome</h2><p>The repository shows how model development, serving, observability, and governance fit together as one system.</p></article><aside class="case-aside"><h3>Stack</h3><p>Python · scikit-learn · MLflow · FastAPI · SQLite · Evidently · Prometheus · Grafana · Docker · pytest · GitHub Actions</p><h3>Why it matters</h3><p>Recruiters can inspect both the static public monitoring interface and the actual local backend/API architecture without needing proprietary infrastructure.</p></aside></div></section></main></body></html>
