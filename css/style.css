@@ -1516,3 +1516,76 @@ a {
     height: 90px;
   }
 }
+
+
+/* ===== Certifications ===== */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: .9rem;
+}
+.cert-card {
+  position: relative;
+  min-height: 210px;
+  padding: 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(145deg, color-mix(in srgb,var(--card) 96%,var(--accent) 4%), var(--card));
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+.cert-card::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  right: -45px;
+  bottom: -55px;
+  border-radius: 50%;
+  background: color-mix(in srgb,var(--accent) 14%,transparent);
+}
+.cert-brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.cert-brand i {
+  font-size: 1.2rem;
+}
+.cert-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 1.1rem 0 .35rem;
+  font-size: 1.28rem;
+  letter-spacing: -.02em;
+}
+.cert-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--hub-muted);
+  font-size: .88rem;
+}
+.cert-focus {
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
+  padding-top: .75rem;
+  border-top: 1px solid var(--border);
+  color: var(--hub-muted);
+  font-size: .78rem;
+  line-height: 1.5;
+}
+.cert-cisco .cert-brand { color: #54b5ff; }
+.cert-aws .cert-brand { color: #f7b84b; }
+
+@media (max-width: 900px) {
+  .cert-grid { grid-template-columns: 1fr; }
+}
