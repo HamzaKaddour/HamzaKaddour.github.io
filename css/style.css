@@ -1589,3 +1589,62 @@ a {
 @media (max-width: 900px) {
   .cert-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ===== Certification branding + earned dates ===== */
+.cert-brand {
+  min-height: 30px;
+}
+.cert-logo {
+  display: block;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.cert-logo-aws {
+  height: 28px;
+}
+.cert-logo-cisco {
+  height: 24px;
+}
+.cert-topline {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-top: 1.05rem;
+}
+.cert-topline h3 {
+  margin: 0;
+}
+.cert-year {
+  flex: 0 0 auto;
+  padding: .26rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--hub-muted);
+  background: color-mix(in srgb,var(--card) 92%,transparent);
+  font-size: .7rem;
+  font-weight: 750;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.cert-card p {
+  margin-top: .45rem;
+}
+.cert-aws {
+  border-color: color-mix(in srgb,#ff9900 28%,var(--border));
+}
+.cert-cisco {
+  border-color: color-mix(in srgb,#1ba0d7 24%,var(--border));
+}
+
+@media (max-width: 430px) {
+  .cert-topline {
+    flex-direction: column;
+    gap: .45rem;
+  }
+}
