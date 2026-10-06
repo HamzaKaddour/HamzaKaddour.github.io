@@ -1667,3 +1667,37 @@ a {
 .cert-aws .cert-brand {
   gap: .72rem;
 }
+
+
+/* ===== Mobile navigation polish ===== */
+@media (max-width: 760px) {
+  .navbar .container.row {
+    display: block;
+  }
+  .navbar .brand {
+    display: inline-block;
+    margin-bottom: .55rem;
+  }
+  .navbar .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: .35rem;
+    overflow-x: auto;
+    padding-bottom: .2rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .navbar .nav::-webkit-scrollbar {
+    display: none;
+  }
+  .navbar .nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    margin: 0;
+    padding: .38rem .45rem;
+  }
+  #themeToggle {
+    flex: 0 0 auto;
+  }
+}
