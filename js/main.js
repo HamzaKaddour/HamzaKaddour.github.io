@@ -28,12 +28,18 @@
     });
   }
 
-  // Set active navigation based on the current page. This avoids stale active states.
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  // Set active navigation based on the current route, including nested case studies.
+  const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
   document.querySelectorAll(".nav a").forEach((link) => {
     const href = link.getAttribute("href");
-    if (!href) return;
-    link.classList.toggle("active", href === currentPage || (currentPage === "" && href === "index.html"));
+    if (!href || href.startsWith("#")) return;
+    const targetPath = new URL(href, window.location.href).pathname.replace(/\/+$/, "") || "/";
+    const isCaseStudy = currentPath.includes("/case-studies/");
+    const active =
+      targetPath === currentPath ||
+      (currentPath === "/" && /\/index\.html$/.test(targetPath)) ||
+      (isCaseStudy && /\/projects\.html$/.test(targetPath));
+    link.classList.toggle("active", active);
   });
 
   // Smooth scroll
