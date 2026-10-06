@@ -1648,3 +1648,22 @@ a {
     gap: .45rem;
   }
 }
+
+
+/* ===== Robust AWS certification brand mark ===== */
+.cert-brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+.cert-brand-icon.aws-mark {
+  color: #ff9900;
+  font-size: 2.05rem;
+  line-height: 1;
+  width: 50px;
+  height: 30px;
+}
+.cert-aws .cert-brand {
+  gap: .72rem;
+}
